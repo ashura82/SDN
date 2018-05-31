@@ -1,3 +1,24 @@
+[Toulouse]
+FRTLSS1
+FRTLSR1
+[Bordeaux]
+FRBDXS1
+FRBDXR1
+
+[Oxford]
+UKOFDS1
+UKOFDR1
+[Manchester]
+UKMCTS1
+UKMCTR1
+
+[France:children]
+Toulouse
+Bordeaux
+
+[UnitedKingdom:children]
+Oxford
+Manchester
 
 [Paris]
 router
