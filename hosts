@@ -20,6 +20,12 @@ Bordeaux
 Oxford
 Manchester
 
+[ALL:children]
+France
+UnitedKingdom
+
+
+
 [Paris]
 router
 router7
