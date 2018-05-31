@@ -1,0 +1,14 @@
+-
+  hosts: router
+  gather_facts: false
+  connection: local
+  tasks:
+    - ios_command:
+        host: router
+        commands: "show run"
+        provider:
+          username: admin
+          password: ingesup
+          authorize: yes
+      register: output
+    - debug: var=output.stdout_lines

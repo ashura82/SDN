@@ -1,0 +1,13 @@
+
+[Paris]
+router
+router7
+
+[toulouse]
+router5
+router6
+
+[evagroup:children]
+toulouse
+paris
+

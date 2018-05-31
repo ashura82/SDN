@@ -1,0 +1,19 @@
+-
+  hosts: evagroup
+  connection: local
+  vars:
+    provider:
+#      host: evagroup
+      username: admin
+      password: ingesup
+  tasks:
+    - 
+      ios_facts:
+        provider: "{{ provider }}"
+        gather_subset: all
+      register: gather
+    -
+      copy: content="{{ gather | to_nice_json }}" dest="out/{{inventory_hostname}}_iosfacts.json"
+
+#    debug: var=gather.stdout_lines
+
