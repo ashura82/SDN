@@ -1,0 +1,10 @@
+-
+  hosts: ALL 
+  gather_facts: false
+  connection: local
+  tasks:
+    - include_vars: secrets.yaml
+    - ios_config:
+        lines:
+          - hostname {{ pays }}{{ region }}{{ type }}{{ typeid }} 
+        provider: "{{ provider }}"
