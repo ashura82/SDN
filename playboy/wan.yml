@@ -1,0 +1,12 @@
+-
+  hosts: Routers 
+  gather_facts: false
+  connection: local
+  tasks:
+    - include_vars: secrets.yaml
+    - ios_config:
+        lines:
+          - ip add {{ ipwan }} 255.255.255.0
+          - description ip WAN
+        parents: interface e0/1 
+        provider: "{{ provider }}"
