@@ -4,7 +4,8 @@
   connection: local
   tasks:
     - include_vars: secrets.yaml
-    - ios_config:
+    - name: Ajout interface loopback
+      ios_config:
         lines:
           - ip add 1.{{ region }}.{{ site }}.{{ iplo0 }} 255.255.255.255
           - description ip loopback
