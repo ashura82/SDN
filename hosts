@@ -10,16 +10,16 @@ RouterBordeaux
 RouterOxford
 RouterManchester
 
-[SwitchToulouse]
+[SwitchBordeaux]
 192.168.1.12
 
-[RouterToulouse]
+[RouterBordeaux]
 192.168.1.11
 
-[RouterBordeaux]
+[RouterToulouse]
 192.168.1.13
 
-[SwitchBordeaux]
+[SwitchToulouse]
 192.168.1.14
 
 [RouterOxford]
