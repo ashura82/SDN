@@ -1,0 +1,17 @@
+-
+  hosts: Switchs 
+  gather_facts: false
+  connection: local
+  tasks:
+    - include_vars: secrets.yaml
+    - include_vars: vlan.yml
+    - name: Ajout vlan
+      ios_vlan:
+        vlan_id: "{{ item.id }}" 
+        name: "{{ item.name }}" 
+        provider: "{{ provider }}"
+      loop:
+        - { id: "{{ vlanid1 }}", name: "{{ vlanname1 }}" }
+        - { id: "{{ vlanid2 }}", name: "{{ vlanname2 }}" }
+        - { id: "{{ vlanid3 }}", name: "{{ vlanname3 }}" }
+        - { id: "{{ vlanid4 }}", name: "{{ vlanname4 }}" }

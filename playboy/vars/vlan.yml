@@ -1,0 +1,9 @@
+vlanid1: 10
+vlanid2: 20
+vlanid3: 30
+vlanid4: 90
+
+vlanname1: LAN
+vlanname2: WIFI
+vlanname3: VOICE
+vlanname4: INTERCO
