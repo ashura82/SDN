@@ -4,7 +4,7 @@
   connection: local
   tasks:
     - include_vars: secrets.yaml
-    - include_vars: vlan.yml
+    - include_vars: vlan.yaml
     - name: Ajout vlan
       ios_vlan:
         vlan_id: "{{ item.id }}" 

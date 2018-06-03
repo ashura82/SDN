@@ -3,12 +3,16 @@ SwitchToulouse
 SwitchBordeaux
 SwitchOxford
 SwitchManchester
+SwitchMunich
+SwitchStuttgart
 
 [Routers:children]
 RouterToulouse
 RouterBordeaux
 RouterOxford
 RouterManchester
+RouterMunich
+RouterStuttgart
 
 [SwitchBordeaux]
 192.168.1.12
@@ -34,6 +38,29 @@ RouterManchester
 [SwitchManchester]
 192.168.1.18
 
+[SwitchMunich]
+192.168.1.20
+
+[RouterMunich]
+192.168.1.19
+
+[RouterStuttgart]
+192.168.1.21
+
+[SwitchStuttgart]
+192.168.1.22
+
+[Munich:children]
+SwitchMunich
+RouterMunich
+
+[Stuttgart:children]
+SwitchStuttgart
+RouterStuttgart
+
+[Allemagne:children]
+Munich
+Stuttgart
 
 [Toulouse:children]
 SwitchToulouse
@@ -62,6 +89,7 @@ Manchester
 [ALL:children]
 France
 UnitedKingdom
+Allemagne
 
 
 

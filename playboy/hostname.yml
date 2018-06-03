@@ -4,7 +4,8 @@
   connection: local
   tasks:
     - include_vars: secrets.yaml
-    - ios_config:
+    - name: Modification du hostname
+      ios_config:
         lines:
           - hostname {{ pays }}{{ ville }}{{ type }}{{ typeid }} 
         provider: "{{ provider }}"

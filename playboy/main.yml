@@ -1,0 +1,8 @@
+---
+- import_playbook: hostname.yml
+- import_playbook: loopback.yml
+- import_playbook: subinterface.yml
+- import_playbook: wan.yml
+- import_playbook: ospf.yml
+- import_playbook: vlan.yml
+
