@@ -1,0 +1,21 @@
+-
+  hosts: Routers 
+  gather_facts: false
+  connection: local
+  tasks:
+    - include_vars: gateway.yaml
+    - include_vars: secrets.yaml
+    - include_vars: vlan.yml
+    - name: Ajout sous-interface vlan 
+      ios_config:
+        lines:
+          - encapsulation dot1Q {{ item.vlan }}
+          - ip add 10.{{ region }}.{{ site }}.{{ item.ip }} {{ item.mask }} 
+        parents: interface e0/0.{{ item.vlan }}
+        provider: "{{ provider }}"
+      loop:
+
+        - { vlan: "{{ vlanid1 }}", ip: "{{ gatewaylan }}", mask: "{{ masklan }}" }
+        - { vlan: "{{ vlanid2 }}", ip: "{{ gatewaywifi }}", mask: "{{ maskwifi }}" }
+        - { vlan: "{{ vlanid3 }}", ip: "{{ gatewayvoix }}", mask: "{{ maskwifi }}" }
+        - { vlan: "{{ vlanid4 }}", ip: "{{ gatewayinterco }}", mask: "{{ maskinterco }}" }

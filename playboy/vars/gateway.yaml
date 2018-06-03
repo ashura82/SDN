@@ -1,0 +1,9 @@
+gatewaylan: 1
+gatewaywifi: 129
+gatewayvoix: 161
+gatewayinterco: 241 
+
+masklan: 255.255.255.128
+maskwifi: 255.255.255.224
+maskvoix: 255.255.255.224
+maskinterco: 255.255.255.240
