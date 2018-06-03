@@ -1,8 +1,0 @@
--
-  hosts: router
-  gather_facts: false 
-  tasks: 
-    - raw: show version
-      register: out
-    - debug: var=out.stdout_lines
-
