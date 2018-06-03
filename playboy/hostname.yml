@@ -6,5 +6,5 @@
     - include_vars: secrets.yaml
     - ios_config:
         lines:
-          - hostname {{ pays }}{{ region }}{{ type }}{{ typeid }} 
+          - hostname {{ pays }}{{ ville }}{{ type }}{{ typeid }} 
         provider: "{{ provider }}"

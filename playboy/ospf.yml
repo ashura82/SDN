@@ -4,9 +4,18 @@
   connection: local
   tasks:
     - include_vars: secrets.yaml
+    - include_vars: network.yaml
     - name: Configure OSPF
       ios_config:
         lines:
-	  - network 0.0.0.0 0.0.0.0 area 0
-	parents:['router ospf 1']
+          - network 10.{{ region }}.{{ site }}.{{ item.ip }}  {{ item.wildcard }} area 0
+          - network {{ networkwan }} {{ wildcardwan }} area 0
+        parents: router ospf 1
         provider: "{{ provider }}"
+      loop:
+        - { ip : "{{ networklan }}", wildcard: "{{ wildcardlan }}" }
+        - { ip : "{{ networkwifi  }}", wildcard: "{{ wildcardwifi }}" }
+        - { ip : "{{ networkvoix }}", wildcard: "{{ wildcardvoix }}" }
+        - { ip : "{{ networkinterco }}", wildcard: "{{ wildcardinterco }}" }
+
+

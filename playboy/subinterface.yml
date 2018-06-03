@@ -3,9 +3,9 @@
   gather_facts: false
   connection: local
   tasks:
-    - include_vars: gateway.yaml
+    - include_vars: network.yaml
     - include_vars: secrets.yaml
-    - include_vars: vlan.yml
+    - include_vars: vlan.yaml
     - name: Ajout sous-interface vlan 
       ios_config:
         lines:

@@ -8,5 +8,6 @@
         lines:
           - ip add {{ ipwan }} 255.255.255.0
           - description ip WAN
+          - no sh
         parents: interface e0/1 
         provider: "{{ provider }}"

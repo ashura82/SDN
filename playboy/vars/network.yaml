@@ -1,0 +1,23 @@
+gatewaylan: 1
+gatewaywifi: 129
+gatewayvoix: 161
+gatewayinterco: 241 
+
+masklan: 255.255.255.128
+maskwifi: 255.255.255.224
+maskvoix: 255.255.255.224
+maskinterco: 255.255.255.240
+maskwan: 255.255.255.0
+
+networklan: 0
+networkwifi: 128
+networkvoix: 160
+networkinterco: 240
+networkwan: 212.14.31.0
+
+wildcardlan: 0.0.0.127
+wildcardwifi: 0.0.0.31
+wildcardvoix: 0.0.0.31
+wildcardinterco: 0.0.0.15
+wildcardwan: 0.0.0.255
+
